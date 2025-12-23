@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "@n8n/node-cli": "^0.17.0",
     "@typescript-eslint/eslint-plugin": "^8.50.1",
     "@typescript-eslint/parser": "^5.45.0",
     "eslint": "^8.28.0",
@@ -48,6 +49,7 @@
     "gulp": "^4.0.2",
     "n8n-workflow": "^1.0.0",
     "prettier": "^2.7.1",
+    "release-it": "^19.1.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
