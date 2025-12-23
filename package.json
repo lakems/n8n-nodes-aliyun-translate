@@ -1,0 +1,61 @@
+{
+  "name": "n8n-nodes-aliyun-translate",
+  "version": "0.0.1",
+  "description": "n8n community node for Aliyun Translate API",
+  "keywords": [
+    "n8n-community-node-package",
+    "aliyun",
+    "translate",
+    "translation",
+    "machine-translation"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/lakems/n8n-nodes-aliyun-translate",
+  "author": {
+    "name": "lakems",
+    "email": "lakems@qq.com"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lakems/n8n-nodes-aliyun-translate.git"
+  },
+  "main": "index.js",
+  "scripts": {
+    "build": "npx tsc && gulp build:icons",
+    "dev": "tsc --watch",
+    "format": "prettier nodes --write",
+    "lint": "eslint nodes credentials --ext .ts",
+    "lintfix": "eslint nodes credentials --ext .ts --fix",
+    "prepublishOnly": "npm run build && npm run lint"
+  },
+  "files": [
+    "dist"
+  ],
+  "n8n": {
+    "n8nNodesApiVersion": 1,
+    "credentials": [
+      "dist/credentials/AliyunTranslateApi.credentials.js"
+    ],
+    "nodes": [
+      "dist/nodes/AliyunTranslate/AliyunTranslate.node.js"
+    ]
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^8.50.1",
+    "@typescript-eslint/parser": "^5.45.0",
+    "eslint": "^8.28.0",
+    "eslint-plugin-n8n-nodes-base": "^1.11.0",
+    "gulp": "^4.0.2",
+    "n8n-workflow": "^1.0.0",
+    "prettier": "^2.7.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@alicloud/alimt20181012": "^1.0.4",
+    "@alicloud/openapi-client": "^0.4.3",
+    "@alicloud/tea-util": "^1.4.11"
+  },
+  "peerDependencies": {
+    "n8n-workflow": "*"
+  }
+}
